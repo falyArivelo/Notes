@@ -1,0 +1,67 @@
+# ============================
+# Visual Studio
+# ============================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ============================
+# Build Results
+# ============================
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+*.log
+
+# ============================
+# NuGet
+# ============================
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ============================
+# Windows Forms Designer
+# ============================
+*.Designer.vb~
+
+# ============================
+# Others
+# ============================
+*.db
+*.bak
+*.cache
+*.tmp
+*.log
+*.tlog
+
+# Optional - ignore test results
+TestResults/
+
+# Optional - ignore publish folder
+publish/
+
+# Optional - ignore local config
+appsettings.Local.json
+
+# JetBrains Rider / ReSharper
+.idea/
+*.DotSettings.user
+
+# ============================
+# VS Code (si utilisé)
+# ============================
+.vscode/
+
+# ============================
+# Siticone / Guna UI DLL (si ajoutée manuellement)
+# ============================
+*.dll
+*.pdb
