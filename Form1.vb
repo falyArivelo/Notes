@@ -226,4 +226,37 @@
         Next
     End Sub
 
+    'Appliquer couleur au Text selectionné
+    Public Sub ApplyColorToSelection(color As Color)
+        If RichTextBox1.SelectionLength > 0 Then
+            Dim selectedColor = RichTextBox1.SelectionColor
+
+            ' Comparer les couleurs (attention : comparer ARGB, pas l'objet Color directement)
+            If selectedColor.ToArgb() = color.ToArgb() Then
+                RichTextBox1.SelectionColor = Color.WhiteSmoke ' couleur par défaut (tu peux changer)
+            Else
+                RichTextBox1.SelectionColor = color
+            End If
+        End If
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        ApplyColorToSelection(TextStyles.Colors("bleu"))
+    End Sub
+
+    'Ajouter une tabulation pour chaque ligne
+    Private Sub IndentSelectedLines()
+        Dim startLine = RichTextBox1.GetLineFromCharIndex(RichTextBox1.SelectionStart)
+        Dim endLine = RichTextBox1.GetLineFromCharIndex(RichTextBox1.SelectionStart + RichTextBox1.SelectionLength)
+
+        For i = startLine To endLine
+            Dim lineStart = RichTextBox1.GetFirstCharIndexFromLine(i)
+            RichTextBox1.Select(lineStart, 0)
+            RichTextBox1.SelectedText = vbTab
+        Next
+    End Sub
+
+    Private Sub ButtonTab_Click(sender As Object, e As EventArgs) Handles ButtonTab.Click
+        IndentSelectedLines()
+    End Sub
 End Class

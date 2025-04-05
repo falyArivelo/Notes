@@ -12,4 +12,13 @@
         {"h2", 14},
         {"paragraph", 11}
     }
+
+    Public ReadOnly Colors As New Dictionary(Of String, Color) From {
+      {"rouge", ColorTranslator.FromHtml("#FF4B4B")},
+      {"bleu", ColorTranslator.FromHtml("#4B7BFF")},
+      {"vert", ColorTranslator.FromHtml("#45C26B")},
+      {"orange", ColorTranslator.FromHtml("#FFA500")},
+      {"grisClair", ColorTranslator.FromHtml("#F2F2F2")}
+    }
+
 End Module
