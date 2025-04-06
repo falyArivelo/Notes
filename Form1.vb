@@ -1,4 +1,6 @@
 ﻿Imports System.IO
+Imports System.Runtime.InteropServices
+Imports Guna.UI2.WinForms
 Imports Newtonsoft.Json
 
 Public Class Form1
@@ -7,22 +9,48 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RichTextBox1.ScrollBars = RichTextBoxScrollBars.None
+        FlowLayoutNotes.VerticalScroll.Visible = False
+        FlowLayoutNotes.AutoScroll = True
+
+        FlowLayoutNotes.VerticalScroll.Visible = False
 
         noteManager.ChargerNotesDepuisDossier()
         AfficherListeDesNotes()
+        flpNotes_SizeChanged(Nothing, Nothing)
+
+        Dim customScroll As New Guna2VScrollBar With {
+    .Dock = DockStyle.Right,
+    .ThumbColor = Color.Transparent,
+    .BorderRadius = 0,
+    .LargeChange = 0,
+    .SmallChange = 0,
+    .FillColor = Color.Transparent,
+    .ScrollbarSize = 0,
+    .ThumbSize = 0
+}
+        Me.Controls.Add(customScroll)
+        customScroll.BindingContainer = FlowLayoutNotes
+        FlowLayoutNotes.AutoScroll = True ' important pour éviter conflit
+    End Sub
+
+    Private Sub flpNotes_SizeChanged(sender As Object, e As EventArgs) Handles FlowLayoutNotes.SizeChanged
+        For Each ctrl As Control In FlowLayoutNotes.Controls
+            ctrl.Width = FlowLayoutNotes.ClientSize.Width - (FlowLayoutNotes.Padding.Horizontal + 5)
+            ctrl.Height = 75
+        Next
     End Sub
 
     Private Sub AfficherListeDesNotes()
         FlowLayoutNotes.Controls.Clear()
 
         For Each note In noteManager.Notes
-            Dim carte As New NoteCard()
-            carte.Afficher(note)
-
+            Dim carte As New NoteCard(note) ' ✅ passe la note ici
             AddHandler carte.NoteCliquee, AddressOf AfficherContenuDansRichTextBox
 
             FlowLayoutNotes.Controls.Add(carte)
         Next
+        Debug.Print("Total de cartes ajoutées : " & FlowLayoutNotes.Controls.Count)
+
     End Sub
 
     Private Sub AfficherContenuDansRichTextBox(note As Note)
@@ -302,7 +330,7 @@ Public Class Form1
         IndentSelectedLines()
     End Sub
 
-    Private Sub ButtonSave_Click(sender As Object, e As EventArgs) Handles ButtonReload.Click
+    Private Sub ButtonSave_Click(sender As Object, e As EventArgs) Handles ButtonSave.Click
         Try
             ' Exemple : récupérer un titre depuis un champ texte (ou tu peux le générer automatiquement)
             Dim titreNote As String = "INFRASSUR"
@@ -339,13 +367,33 @@ Public Class Form1
 
 
     'Reload Notes from Folder
-    Private Sub Reload_Click(sender As Object, e As EventArgs) Handles ButtonReload.Click, ButtonSave.Click
+    Private Sub Reload_Click(sender As Object, e As EventArgs) Handles ButtonReload.Click
         noteManager.ChargerNotesDepuisDossier()
         AfficherListeDesNotes()
+        flpNotes_SizeChanged(Nothing, Nothing)
         RichTextBox1.Clear() ' optionnel : vider l'affichage de la dernière note
+
     End Sub
 
     Private Sub logoName_Click(sender As Object, e As EventArgs) Handles logoName.Click
 
     End Sub
+
+    Private Const WS_VSCROLL As Integer = &H200000
+
+    Private Sub MasquerScrollbarVerticale(panel As FlowLayoutPanel)
+        Dim style As Integer = CInt(GetWindowLong(panel.Handle, -16))
+        style = style And Not WS_VSCROLL
+        SetWindowLong(panel.Handle, -16, style)
+    End Sub
+
+    <DllImport("user32.dll")>
+    Private Shared Function GetWindowLong(hWnd As IntPtr, nIndex As Integer) As IntPtr
+    End Function
+
+    <DllImport("user32.dll")>
+    Private Shared Function SetWindowLong(hWnd As IntPtr, nIndex As Integer, dwNewLong As IntPtr) As IntPtr
+    End Function
+
+
 End Class

@@ -22,41 +22,15 @@ Partial Class NoteCard
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Titre = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Description = New Guna.UI2.WinForms.Guna2HtmlLabel()
         SuspendLayout()
-        ' 
-        ' Titre
-        ' 
-        Titre.BackColor = Color.Transparent
-        Titre.Location = New Point(6, 6)
-        Titre.Name = "Titre"
-        Titre.Size = New Size(25, 17)
-        Titre.TabIndex = 0
-        Titre.Text = "Title"
-        ' 
-        ' Description
-        ' 
-        Description.BackColor = Color.Transparent
-        Description.Location = New Point(8, 29)
-        Description.Name = "Description"
-        Description.Size = New Size(63, 17)
-        Description.TabIndex = 1
-        Description.Text = "Description"
         ' 
         ' NoteCard
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        Controls.Add(Description)
-        Controls.Add(Titre)
         Name = "NoteCard"
-        Size = New Size(223, 53)
+        Size = New Size(223, 67)
         ResumeLayout(False)
-        PerformLayout()
     End Sub
-
-    Friend WithEvents Titre As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Description As Guna.UI2.WinForms.Guna2HtmlLabel
 
 End Class

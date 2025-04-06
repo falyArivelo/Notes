@@ -473,6 +473,17 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>32</value>
   </metadata>
+  <data name="Guna2GradientCircleButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAAUVJREFUeF7tm8FKwwAUBHvy8+2X6ik9x0zZg4Q5tSjJ5g0MSBZLp6CHh96GYRiG
+        YfhX1nX9WJbl8/F4fCNf8yxzP1vwfQtff8uzzP1swV/7D4BnmfuR+KeZ+7F4zNyPxWPmfiweM/dj8Zi5
+        H4vHzP1YPGbux+Ixcz8Wj5n7sXjM3I/FY+Z+LB4z92PxmLkfi8fM/Vg8Zu7H4jFzPxaPmfuxeMzcj8Vj
+        5uOwu97qmz6w71+b7Xp7Nt+6Nm8vYNfbs/n6tZlv3r3YGX39A7j8j8Dlfwn+FfJmn2bux+Ixcz8Wj5n7
+        sXjM3I/FY+Z+LB4z92PxmLkfi8fM/Vg8Zu7H4jFzPxaPmfuxeMzcj8Vj5n4sHjP3Y/GYuR+Lx8z9WDxm
+        7sfiMXM/Fo+Z+9lir/3H0nZtfut6ezZ21+br/cPEMAzDMByB2+0H41R2adA4E4EAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="ButtonAddFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -690,7 +701,7 @@
   <data name="ButtonReload.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAABZFJREFUeF7tm0uIHFUYhUdjRhMD4hvNSEQFX7g0unDhUg3RzKDushGJL0Sii0QE
+        DAAACwwBP0AiyAAABZFJREFUeF7tm0uIHFUYhUdjRhMD4hvNSEQFX7g0unDhUg3RzKDushGJL0Sii0QE
         F3k54Cog0RCU4AOZ4DgbV640akIWihvRQaPJJAFNJm33vJokJu33D6eHmuutZ1d1V9o+cKhi6v/Pf+6t
         W9W3btX09dBDDz0UiUajcdns7OwD09PTr7HdMzMzsx/+zn6F7Vl4QfsT8Fv298KNc3NzD1muZCJB7C3k
         fkbelJH9sVqtdqcOtx8Y78fIIEY+l6lGRtbUsCE0r5D8IljjOX46kNNkxY4prD2Ympq6nsLb4GTASF48

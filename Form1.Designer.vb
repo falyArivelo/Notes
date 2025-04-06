@@ -37,11 +37,10 @@ Partial Class Form1
         Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -55,6 +54,7 @@ Partial Class Form1
         Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Guna2ControlBox3 = New Guna.UI2.WinForms.Guna2ControlBox()
@@ -65,10 +65,10 @@ Partial Class Form1
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         ButtonReload = New Guna.UI2.WinForms.Guna2ImageButton()
         FlowLayoutNotes = New FlowLayoutPanel()
+        Guna2GradientCircleButton1 = New Guna.UI2.WinForms.Guna2GradientCircleButton()
         Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         FlowLayoutPanel3 = New FlowLayoutPanel()
         ButtonSave = New Guna.UI2.WinForms.Guna2ImageButton()
-        Guna2GradientCircleButton1 = New Guna.UI2.WinForms.Guna2GradientCircleButton()
         RichTextBox1 = New RichTextBox()
         FlowLayoutPanel1 = New FlowLayoutPanel()
         ButtonAddFile = New Guna.UI2.WinForms.Guna2ImageButton()
@@ -103,7 +103,7 @@ Partial Class Form1
         Guna2ControlBox1.HoverState.FillColor = Color.Salmon
         Guna2ControlBox1.HoverState.IconColor = Color.White
         Guna2ControlBox1.IconColor = Color.DimGray
-        Guna2ControlBox1.Location = New Point(1057, 0)
+        Guna2ControlBox1.Location = New Point(1107, 0)
         Guna2ControlBox1.Name = "Guna2ControlBox1"
         Guna2ControlBox1.PressedColor = Color.Red
         Guna2ControlBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
@@ -117,7 +117,7 @@ Partial Class Form1
         Guna2ControlBox2.CustomizableEdges = CustomizableEdges3
         Guna2ControlBox2.FillColor = Color.Transparent
         Guna2ControlBox2.IconColor = Color.DimGray
-        Guna2ControlBox2.Location = New Point(1006, 0)
+        Guna2ControlBox2.Location = New Point(1056, 0)
         Guna2ControlBox2.Name = "Guna2ControlBox2"
         Guna2ControlBox2.PressedColor = Color.Gainsboro
         Guna2ControlBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
@@ -131,7 +131,7 @@ Partial Class Form1
         Guna2ControlBox3.CustomizableEdges = CustomizableEdges5
         Guna2ControlBox3.FillColor = Color.Transparent
         Guna2ControlBox3.IconColor = Color.DimGray
-        Guna2ControlBox3.Location = New Point(955, 0)
+        Guna2ControlBox3.Location = New Point(1005, 0)
         Guna2ControlBox3.Name = "Guna2ControlBox3"
         Guna2ControlBox3.PressedColor = Color.Gainsboro
         Guna2ControlBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
@@ -216,8 +216,25 @@ Partial Class Form1
         FlowLayoutNotes.AutoScroll = True
         FlowLayoutNotes.Location = New Point(4, 77)
         FlowLayoutNotes.Name = "FlowLayoutNotes"
-        FlowLayoutNotes.Size = New Size(276, 548)
+        FlowLayoutNotes.Size = New Size(276, 497)
         FlowLayoutNotes.TabIndex = 0
+        ' 
+        ' Guna2GradientCircleButton1
+        ' 
+        Guna2GradientCircleButton1.DisabledState.BorderColor = Color.DarkGray
+        Guna2GradientCircleButton1.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2GradientCircleButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2GradientCircleButton1.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2GradientCircleButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2GradientCircleButton1.Font = New Font("Segoe UI", 9F)
+        Guna2GradientCircleButton1.ForeColor = Color.White
+        Guna2GradientCircleButton1.Image = CType(resources.GetObject("Guna2GradientCircleButton1.Image"), Image)
+        Guna2GradientCircleButton1.Location = New Point(524, 3)
+        Guna2GradientCircleButton1.Name = "Guna2GradientCircleButton1"
+        Guna2GradientCircleButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges9
+        Guna2GradientCircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Guna2GradientCircleButton1.Size = New Size(35, 35)
+        Guna2GradientCircleButton1.TabIndex = 1
         ' 
         ' Guna2Panel3
         ' 
@@ -235,7 +252,6 @@ Partial Class Form1
         ' FlowLayoutPanel3
         ' 
         FlowLayoutPanel3.Controls.Add(ButtonSave)
-        FlowLayoutPanel3.Controls.Add(Guna2GradientCircleButton1)
         FlowLayoutPanel3.Location = New Point(14, 11)
         FlowLayoutPanel3.Name = "FlowLayoutPanel3"
         FlowLayoutPanel3.Size = New Size(539, 32)
@@ -253,25 +269,9 @@ Partial Class Form1
         ButtonSave.Location = New Point(3, 3)
         ButtonSave.Name = "ButtonSave"
         ButtonSave.PressedState.ImageSize = New Size(64, 64)
-        ButtonSave.ShadowDecoration.CustomizableEdges = CustomizableEdges23
+        ButtonSave.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         ButtonSave.Size = New Size(32, 32)
         ButtonSave.TabIndex = 0
-        ' 
-        ' Guna2GradientCircleButton1
-        ' 
-        Guna2GradientCircleButton1.DisabledState.BorderColor = Color.DarkGray
-        Guna2GradientCircleButton1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2GradientCircleButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2GradientCircleButton1.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2GradientCircleButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2GradientCircleButton1.Font = New Font("Segoe UI", 9F)
-        Guna2GradientCircleButton1.ForeColor = Color.White
-        Guna2GradientCircleButton1.Location = New Point(41, 3)
-        Guna2GradientCircleButton1.Name = "Guna2GradientCircleButton1"
-        Guna2GradientCircleButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        Guna2GradientCircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Guna2GradientCircleButton1.Size = New Size(28, 28)
-        Guna2GradientCircleButton1.TabIndex = 1
         ' 
         ' RichTextBox1
         ' 
@@ -287,6 +287,7 @@ Partial Class Form1
         ' 
         ' FlowLayoutPanel1
         ' 
+        FlowLayoutPanel1.Controls.Add(Guna2GradientCircleButton1)
         FlowLayoutPanel1.Controls.Add(ButtonAddFile)
         FlowLayoutPanel1.Controls.Add(ButtonCote)
         FlowLayoutPanel1.Controls.Add(ButtonItalic)
@@ -316,10 +317,10 @@ Partial Class Form1
         ButtonAddFile.ImageOffset = New Point(0, 0)
         ButtonAddFile.ImageRotate = 0F
         ButtonAddFile.ImageSize = New Size(20, 20)
-        ButtonAddFile.Location = New Point(525, 3)
+        ButtonAddFile.Location = New Point(484, 3)
         ButtonAddFile.Name = "ButtonAddFile"
         ButtonAddFile.PressedState.ImageSize = New Size(0, 0)
-        ButtonAddFile.ShadowDecoration.CustomizableEdges = CustomizableEdges9
+        ButtonAddFile.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         ButtonAddFile.Size = New Size(34, 34)
         ButtonAddFile.TabIndex = 1
         ' 
@@ -331,10 +332,10 @@ Partial Class Form1
         ButtonCote.ImageOffset = New Point(0, 0)
         ButtonCote.ImageRotate = 0F
         ButtonCote.ImageSize = New Size(20, 20)
-        ButtonCote.Location = New Point(485, 3)
+        ButtonCote.Location = New Point(444, 3)
         ButtonCote.Name = "ButtonCote"
         ButtonCote.PressedState.ImageSize = New Size(0, 0)
-        ButtonCote.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        ButtonCote.ShadowDecoration.CustomizableEdges = CustomizableEdges11
         ButtonCote.Size = New Size(34, 34)
         ButtonCote.TabIndex = 2
         ' 
@@ -346,10 +347,10 @@ Partial Class Form1
         ButtonItalic.ImageOffset = New Point(0, 0)
         ButtonItalic.ImageRotate = 0F
         ButtonItalic.ImageSize = New Size(20, 20)
-        ButtonItalic.Location = New Point(445, 3)
+        ButtonItalic.Location = New Point(404, 3)
         ButtonItalic.Name = "ButtonItalic"
         ButtonItalic.PressedState.ImageSize = New Size(0, 0)
-        ButtonItalic.ShadowDecoration.CustomizableEdges = CustomizableEdges11
+        ButtonItalic.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         ButtonItalic.Size = New Size(34, 34)
         ButtonItalic.TabIndex = 3
         ' 
@@ -362,10 +363,10 @@ Partial Class Form1
         ButtonUnderline.ImageOffset = New Point(0, 0)
         ButtonUnderline.ImageRotate = 0F
         ButtonUnderline.ImageSize = New Size(20, 20)
-        ButtonUnderline.Location = New Point(405, 3)
+        ButtonUnderline.Location = New Point(364, 3)
         ButtonUnderline.Name = "ButtonUnderline"
         ButtonUnderline.PressedState.ImageSize = New Size(0, 0)
-        ButtonUnderline.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        ButtonUnderline.ShadowDecoration.CustomizableEdges = CustomizableEdges13
         ButtonUnderline.Size = New Size(34, 34)
         ButtonUnderline.TabIndex = 4
         ' 
@@ -378,10 +379,10 @@ Partial Class Form1
         ButtonBold.ImageOffset = New Point(0, 0)
         ButtonBold.ImageRotate = 0F
         ButtonBold.ImageSize = New Size(20, 20)
-        ButtonBold.Location = New Point(365, 3)
+        ButtonBold.Location = New Point(324, 3)
         ButtonBold.Name = "ButtonBold"
         ButtonBold.PressedState.ImageSize = New Size(0, 0)
-        ButtonBold.ShadowDecoration.CustomizableEdges = CustomizableEdges13
+        ButtonBold.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         ButtonBold.Size = New Size(34, 34)
         ButtonBold.TabIndex = 5
         ' 
@@ -394,10 +395,10 @@ Partial Class Form1
         ButtonH2.ImageOffset = New Point(0, 0)
         ButtonH2.ImageRotate = 0F
         ButtonH2.ImageSize = New Size(20, 20)
-        ButtonH2.Location = New Point(325, 3)
+        ButtonH2.Location = New Point(284, 3)
         ButtonH2.Name = "ButtonH2"
         ButtonH2.PressedState.ImageSize = New Size(0, 0)
-        ButtonH2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        ButtonH2.ShadowDecoration.CustomizableEdges = CustomizableEdges15
         ButtonH2.Size = New Size(34, 34)
         ButtonH2.TabIndex = 6
         ' 
@@ -410,10 +411,10 @@ Partial Class Form1
         ButtonH1.ImageOffset = New Point(0, 0)
         ButtonH1.ImageRotate = 0F
         ButtonH1.ImageSize = New Size(20, 20)
-        ButtonH1.Location = New Point(285, 3)
+        ButtonH1.Location = New Point(244, 3)
         ButtonH1.Name = "ButtonH1"
         ButtonH1.PressedState.ImageSize = New Size(0, 0)
-        ButtonH1.ShadowDecoration.CustomizableEdges = CustomizableEdges15
+        ButtonH1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         ButtonH1.Size = New Size(34, 34)
         ButtonH1.TabIndex = 7
         ' 
@@ -426,10 +427,10 @@ Partial Class Form1
         ButtonTitle.ImageOffset = New Point(0, 0)
         ButtonTitle.ImageRotate = 0F
         ButtonTitle.ImageSize = New Size(20, 20)
-        ButtonTitle.Location = New Point(245, 3)
+        ButtonTitle.Location = New Point(204, 3)
         ButtonTitle.Name = "ButtonTitle"
         ButtonTitle.PressedState.ImageSize = New Size(0, 0)
-        ButtonTitle.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        ButtonTitle.ShadowDecoration.CustomizableEdges = CustomizableEdges17
         ButtonTitle.Size = New Size(34, 34)
         ButtonTitle.TabIndex = 8
         ' 
@@ -441,10 +442,10 @@ Partial Class Form1
         ButtonCheckBox.ImageOffset = New Point(0, 0)
         ButtonCheckBox.ImageRotate = 0F
         ButtonCheckBox.ImageSize = New Size(20, 20)
-        ButtonCheckBox.Location = New Point(205, 3)
+        ButtonCheckBox.Location = New Point(164, 3)
         ButtonCheckBox.Name = "ButtonCheckBox"
         ButtonCheckBox.PressedState.ImageSize = New Size(0, 0)
-        ButtonCheckBox.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        ButtonCheckBox.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         ButtonCheckBox.Size = New Size(34, 34)
         ButtonCheckBox.TabIndex = 9
         ' 
@@ -456,10 +457,10 @@ Partial Class Form1
         ButtonUL.ImageOffset = New Point(0, 0)
         ButtonUL.ImageRotate = 0F
         ButtonUL.ImageSize = New Size(20, 20)
-        ButtonUL.Location = New Point(165, 3)
+        ButtonUL.Location = New Point(124, 3)
         ButtonUL.Name = "ButtonUL"
         ButtonUL.PressedState.ImageSize = New Size(0, 0)
-        ButtonUL.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        ButtonUL.ShadowDecoration.CustomizableEdges = CustomizableEdges19
         ButtonUL.Size = New Size(34, 34)
         ButtonUL.TabIndex = 10
         ' 
@@ -471,10 +472,10 @@ Partial Class Form1
         ButtonOL.ImageOffset = New Point(0, 0)
         ButtonOL.ImageRotate = 0F
         ButtonOL.ImageSize = New Size(20, 20)
-        ButtonOL.Location = New Point(125, 3)
+        ButtonOL.Location = New Point(84, 3)
         ButtonOL.Name = "ButtonOL"
         ButtonOL.PressedState.ImageSize = New Size(0, 0)
-        ButtonOL.ShadowDecoration.CustomizableEdges = CustomizableEdges19
+        ButtonOL.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         ButtonOL.Size = New Size(34, 34)
         ButtonOL.TabIndex = 10
         ' 
@@ -486,35 +487,35 @@ Partial Class Form1
         ButtonTab.ImageOffset = New Point(0, 0)
         ButtonTab.ImageRotate = 0F
         ButtonTab.ImageSize = New Size(20, 20)
-        ButtonTab.Location = New Point(85, 3)
+        ButtonTab.Location = New Point(44, 3)
         ButtonTab.Name = "ButtonTab"
         ButtonTab.PressedState.ImageSize = New Size(0, 0)
-        ButtonTab.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        ButtonTab.ShadowDecoration.CustomizableEdges = CustomizableEdges21
         ButtonTab.Size = New Size(34, 34)
         ButtonTab.TabIndex = 9
         ' 
         ' Guna2Button1
         ' 
         Guna2Button1.BorderRadius = 10
-        Guna2Button1.CustomizableEdges = CustomizableEdges21
+        Guna2Button1.CustomizableEdges = CustomizableEdges22
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button1.Font = New Font("Segoe UI", 9F)
         Guna2Button1.ForeColor = Color.White
-        Guna2Button1.Location = New Point(59, 3)
+        Guna2Button1.Location = New Point(18, 3)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.Padding = New Padding(7)
         Guna2Button1.PressedDepth = 20
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges23
         Guna2Button1.Size = New Size(20, 20)
         Guna2Button1.TabIndex = 11
         Guna2Button1.Text = "blue"
         ' 
         ' FlowLayoutPanel2
         ' 
-        FlowLayoutPanel2.Location = New Point(359, 43)
+        FlowLayoutPanel2.Location = New Point(359, 44)
         FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         FlowLayoutPanel2.Size = New Size(200, 100)
         FlowLayoutPanel2.TabIndex = 12
@@ -529,7 +530,7 @@ Partial Class Form1
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(70), CByte(70), CByte(70))
-        ClientSize = New Size(1100, 650)
+        ClientSize = New Size(1150, 650)
         Controls.Add(FlowLayoutPanel1)
         Controls.Add(Guna2Panel3)
         Controls.Add(Guna2Panel2)
