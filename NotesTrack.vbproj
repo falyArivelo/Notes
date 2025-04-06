@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Siticone.NetFramework.UI" Version="2025.2.14" />
   </ItemGroup>
 
@@ -45,6 +46,14 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="B:\1TU\INFRASSUR\formations\winform\NotesTrack\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="B:\1TU\INFRASSUR\formations\winform\NotesTrack\.editorconfig" />
   </ItemGroup>
 
 </Project>

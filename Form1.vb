@@ -1,7 +1,49 @@
-﻿Public Class Form1
+﻿Imports System.IO
+Imports Newtonsoft.Json
+
+Public Class Form1
+    Private noteManager As New NoteManager()
+    Private noteCardSelectionnee As NoteCard = Nothing
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RichTextBox1.ScrollBars = RichTextBoxScrollBars.None
+
+        noteManager.ChargerNotesDepuisDossier()
+        AfficherListeDesNotes()
     End Sub
+
+    Private Sub AfficherListeDesNotes()
+        FlowLayoutNotes.Controls.Clear()
+
+        For Each note In noteManager.Notes
+            Dim carte As New NoteCard()
+            carte.Afficher(note)
+
+            AddHandler carte.NoteCliquee, AddressOf AfficherContenuDansRichTextBox
+
+            FlowLayoutNotes.Controls.Add(carte)
+        Next
+    End Sub
+
+    Private Sub AfficherContenuDansRichTextBox(note As Note)
+        RichTextBox1.Rtf = note.ContenuRTF
+
+
+        ' Rechercher la carte correspondante
+        For Each ctrl In FlowLayoutNotes.Controls
+            If TypeOf ctrl Is NoteCard Then
+                Dim nc = CType(ctrl, NoteCard)
+
+                ' Mettre la carte sélectionnée en surbrillance
+                Dim estSelectionnee = nc.Note Is note
+                nc.SetSelection(estSelectionnee)
+
+                ' Mémoriser la sélection
+                If estSelectionnee Then noteCardSelectionnee = nc
+            End If
+        Next
+    End Sub
+
 
 
     Private Sub ApplyStyle(styleName As String)
@@ -258,5 +300,52 @@
 
     Private Sub ButtonTab_Click(sender As Object, e As EventArgs) Handles ButtonTab.Click
         IndentSelectedLines()
+    End Sub
+
+    Private Sub ButtonSave_Click(sender As Object, e As EventArgs) Handles ButtonReload.Click
+        Try
+            ' Exemple : récupérer un titre depuis un champ texte (ou tu peux le générer automatiquement)
+            Dim titreNote As String = "INFRASSUR"
+            If String.IsNullOrEmpty(titreNote) Then
+                MessageBox.Show("Veuillez entrer un titre pour la note.", "⚠️ Titre manquant", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Exit Sub
+            End If
+
+            ' === Créer l'objet Note ===
+            Dim note As New Note With {
+                .Titre = titreNote,
+                .ContenuRTF = RichTextBox1.Rtf,
+                .DateCreation = DateTime.Now
+            }
+
+            ' === Créer dossier Notes s’il n’existe pas ===
+            Dim notesDir As String = "Notes"
+            If Not IO.Directory.Exists(notesDir) Then IO.Directory.CreateDirectory(notesDir)
+
+            ' === Nom de fichier sécurisé ===
+            Dim safeTitle = String.Join("_", note.Titre.Split(IO.Path.GetInvalidFileNameChars()))
+            Dim filePath = IO.Path.Combine(notesDir, $"{safeTitle}.json")
+
+            ' === Sérialiser la note en JSON ===
+            Dim json As String = JsonConvert.SerializeObject(note, Formatting.Indented)
+            IO.File.WriteAllText(filePath, json)
+
+            MessageBox.Show("Note enregistrée avec succès.", "✅ Sauvegarde", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Catch ex As Exception
+            MessageBox.Show("Erreur : " & ex.Message, "❌ Échec", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
+    'Reload Notes from Folder
+    Private Sub Reload_Click(sender As Object, e As EventArgs) Handles ButtonReload.Click, ButtonSave.Click
+        noteManager.ChargerNotesDepuisDossier()
+        AfficherListeDesNotes()
+        RichTextBox1.Clear() ' optionnel : vider l'affichage de la dernière note
+    End Sub
+
+    Private Sub logoName_Click(sender As Object, e As EventArgs) Handles logoName.Click
+
     End Sub
 End Class

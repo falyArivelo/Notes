@@ -1,0 +1,139 @@
+# Supprimer la ligne ci-dessous si vous voulez hériter les paramètres .editorconfig des répertoires supérieurs
+root = true
+
+# Fichiers Visual Basic
+[*.vb]
+
+#### Options EditorConfig principales ####
+
+# Indentation et espacement
+indent_size = 4
+indent_style = space
+tab_width = 4
+
+# Préférences de nouvelle ligne
+end_of_line = crlf
+insert_final_newline = false
+
+#### Actions du code .NET ####
+
+# Membres du type
+dotnet_hide_advanced_members = false
+dotnet_member_insertion_location = with_other_members_of_the_same_kind
+dotnet_property_generation_behavior = prefer_throwing_properties
+
+# Recherche de symbole
+dotnet_search_reference_assemblies = true
+
+#### Conventions de codage .NET ####
+
+# Organiser les instructions Using
+dotnet_separate_import_directive_groups = false
+dotnet_sort_system_directives_first = true
+file_header_template = unset
+
+# Préférences de this. et Me.
+dotnet_style_qualification_for_event = false
+dotnet_style_qualification_for_field = false
+dotnet_style_qualification_for_method = false
+dotnet_style_qualification_for_property = false
+
+# Préférences des mots clés de langage par rapport aux types BCL
+dotnet_style_predefined_type_for_locals_parameters_members = true
+dotnet_style_predefined_type_for_member_access = true
+
+# Préférences de parenthèses
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity
+
+# Préférences de modificateur
+dotnet_style_require_accessibility_modifiers = for_non_interface_members
+
+# Préférences de niveau expression
+dotnet_prefer_system_hash_code = true
+dotnet_style_coalesce_expression = true
+dotnet_style_collection_initializer = true
+dotnet_style_explicit_tuple_names = true
+dotnet_style_namespace_match_folder = true
+dotnet_style_null_propagation = true
+dotnet_style_object_initializer = true
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
+dotnet_style_prefer_auto_properties = true
+dotnet_style_prefer_collection_expression = when_types_loosely_match
+dotnet_style_prefer_compound_assignment = true
+dotnet_style_prefer_conditional_expression_over_assignment = true
+dotnet_style_prefer_conditional_expression_over_return = true
+dotnet_style_prefer_foreach_explicit_cast_in_source = when_strongly_typed
+dotnet_style_prefer_inferred_anonymous_type_member_names = true
+dotnet_style_prefer_inferred_tuple_names = true
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true
+dotnet_style_prefer_simplified_boolean_expressions = true
+dotnet_style_prefer_simplified_interpolation = true
+
+# Préférences de champ
+dotnet_style_readonly_field = true
+
+# Préférences de paramètre
+dotnet_code_quality_unused_parameters = all
+
+# Préférences de suppression
+dotnet_remove_unnecessary_suppression_exclusions = none
+
+# Préférences de nouvelle ligne
+dotnet_style_allow_multiple_blank_lines_experimental = true
+dotnet_style_allow_statement_immediately_after_block_experimental = true
+
+#### Conventions de codage VB ####
+
+# Préférences de modificateur
+visual_basic_preferred_modifier_order = partial,default,private,protected,public,friend,notoverridable,overridable,mustoverride,overloads,overrides,mustinherit,notinheritable,static,shared,shadows,readonly,writeonly,dim,const,withevents,widening,narrowing,custom,async,iterator
+
+# Préférences de niveau expression
+visual_basic_style_prefer_isnot_expression = true
+visual_basic_style_prefer_simplified_object_creation = true
+visual_basic_style_unused_value_assignment_preference = unused_local_variable
+visual_basic_style_unused_value_expression_statement_preference = unused_local_variable
+
+#### Styles de nommage ####
+
+# Règles de nommage
+
+dotnet_naming_rule.interface_should_be_commence_par_i.severity = suggestion
+dotnet_naming_rule.interface_should_be_commence_par_i.symbols = interface
+dotnet_naming_rule.interface_should_be_commence_par_i.style = commence_par_i
+
+dotnet_naming_rule.types_should_be_casse_pascal.severity = suggestion
+dotnet_naming_rule.types_should_be_casse_pascal.symbols = types
+dotnet_naming_rule.types_should_be_casse_pascal.style = casse_pascal
+
+dotnet_naming_rule.membres_autres_que_des_champs_should_be_casse_pascal.severity = suggestion
+dotnet_naming_rule.membres_autres_que_des_champs_should_be_casse_pascal.symbols = membres_autres_que_des_champs
+dotnet_naming_rule.membres_autres_que_des_champs_should_be_casse_pascal.style = casse_pascal
+
+# Spécifications de symboles
+
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.interface.required_modifiers = 
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.types.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.types.required_modifiers = 
+
+dotnet_naming_symbols.membres_autres_que_des_champs.applicable_kinds = property, event, method
+dotnet_naming_symbols.membres_autres_que_des_champs.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.membres_autres_que_des_champs.required_modifiers = 
+
+# Styles de nommage
+
+dotnet_naming_style.casse_pascal.required_prefix = 
+dotnet_naming_style.casse_pascal.required_suffix = 
+dotnet_naming_style.casse_pascal.word_separator = 
+dotnet_naming_style.casse_pascal.capitalization = pascal_case
+
+dotnet_naming_style.commence_par_i.required_prefix = I
+dotnet_naming_style.commence_par_i.required_suffix = 
+dotnet_naming_style.commence_par_i.word_separator = 
+dotnet_naming_style.commence_par_i.capitalization = pascal_case
